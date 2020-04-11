@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_workouts"
+            android:title="Workouts" />
+        <item
+            android:id="@+id/nav_general_routines"
+            android:title="General Routines" />
+        <item
+            android:id="@+id/nav_my_routines"
+            android:title="My Routines" />
+        <item
+            android:id="@+id/nav_gym_timer"
+            android:title="Gym Timer" />
+        <item
+            android:id="@+id/nav_nutrition"
+            android:title="My Routines" />
+        <item
+            android:id="@+id/nav_feedback"
+            android:title="Support &amp; Feedback" />
+    </group>
+
+    <!-- <item android:title="Communicate">
+         <menu>
+             <item
+                 android:id="@+id/nav_share"
+                 android:icon="@drawable/ic_menu_share"
+                 android:title="Share" />
+             <item
+                 android:id="@+id/nav_send"
+                 android:icon="@drawable/ic_menu_send"
+                 android:title="Send" />
+         </menu>
+     </item>-->
+
+</menu>

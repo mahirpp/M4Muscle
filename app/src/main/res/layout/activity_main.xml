@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/themeColor"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_layout"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
+
+
+        <include
+            layout="@layout/app_bar_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <!--navigation drawer custom layout-->
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="#ffffff"
+            android:fitsSystemWindows="true"
+            app:itemTextColor="@color/themeColor"
+            app:paddingEnd="15dp"
+            app:paddingStart="15dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include layout="@layout/nav_header_main" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_workout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/titleColor">
+
+                            <ImageView
+                                android:id="@+id/imageView"
+                                android:layout_width="65dp"
+                                android:layout_height="65dp"
+                                android:padding="@dimen/small_padding"
+                                android:src="@drawable/ic_workouts" />
+
+                            <TextView
+                                android:id="@+id/tv_workout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/imageView"
+                                android:padding="@dimen/very_small_padding"
+                                android:text="Workouts"
+                                android:textSize="@dimen/small_text"
+                                android:textColor="#000000" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_routines"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/titleColor">
+
+                            <ImageView
+                                android:id="@+id/generalRoutines"
+                                android:layout_width="65dp"
+                                android:layout_height="65dp"
+                                android:padding="@dimen/small_padding"
+                                android:src="@drawable/ic_routines" />
+
+                            <TextView
+                                android:id="@+id/tv_routine"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/generalRoutines"
+                                android:padding="@dimen/very_small_padding"
+                                android:text="General Routines"
+                                android:textSize="@dimen/small_text"
+                                android:textColor="#000000" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_my_routines"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/titleColor">
+
+                            <ImageView
+                                android:id="@+id/myroutines"
+                                android:layout_width="65dp"
+                                android:layout_height="65dp"
+                                android:padding="@dimen/small_padding"
+                                android:src="@drawable/ic_my_workouts" />
+
+                            <TextView
+                                android:id="@+id/tv_my_routine"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/myroutines"
+                                android:padding="@dimen/very_small_padding"
+                                android:text="My Routines"
+                                android:textSize="@dimen/small_text"
+                                android:textColor="#000000" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_gymTimer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/titleColor">
+
+                            <ImageView
+                                android:id="@+id/gymtimer"
+                                android:layout_width="65dp"
+                                android:layout_height="65dp"
+                                android:padding="@dimen/small_padding"
+                                android:src="@drawable/ic_gym_timer" />
+
+                            <TextView
+                                android:id="@+id/tv_gymtimer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/gymtimer"
+                                android:padding="@dimen/very_small_padding"
+                                android:text="Gym Timer"
+                                android:textSize="@dimen/small_text"
+                                android:textColor="#000000" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_nutrition"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/titleColor">
+
+                            <ImageView
+                                android:id="@+id/nutrition"
+                                android:layout_width="65dp"
+                                android:layout_height="65dp"
+                                android:padding="@dimen/small_padding"
+                                android:src="@drawable/ic_nutrition" />
+
+                            <TextView
+                                android:id="@+id/tv_nutrition"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/nutrition"
+                                android:padding="@dimen/very_small_padding"
+                                android:text="Nutrition"
+                                android:textColor="#000000" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_help"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/titleColor">
+
+                            <ImageView
+                                android:id="@+id/help"
+                                android:layout_width="65dp"
+                                android:layout_height="65dp"
+                                android:padding="@dimen/small_padding"
+                                android:src="@drawable/ic_help" />
+
+                            <TextView
+                                android:id="@+id/tv_help"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/help"
+                                android:padding="@dimen/very_small_padding"
+                                android:textSize="@dimen/small_text"
+                                android:text="Support &amp; Feedback"
+                                android:textColor="#000000" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </android.support.design.widget.NavigationView>
+
+
+    </android.support.v4.widget.DrawerLayout>
+</RelativeLayout>

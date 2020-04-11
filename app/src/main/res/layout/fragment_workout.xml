@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <SearchView
+            android:id="@+id/sav_workout_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_menu_camera"
+            android:foregroundTint="@color/themeColor"
+            android:hint="Search a workout" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_workout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small_padding"
+            android:background="#FFFFFF"
+            android:padding="@dimen/very_small_padding" />
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/fl_progressLayout"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80808080"
+        android:indeterminate="true" />
+</RelativeLayout>

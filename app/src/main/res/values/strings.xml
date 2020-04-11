@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">M4Muscle</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!--screen headers-->
+    <string name="workout_label">Workout</string>
+
+    <!--Workout-->
+    <string name="workout_chest">Chest</string>
+    <string name="workout_biceps">Biceps</string>
+    <string name="workout_triceps">Triceps</string>
+    <string name="workout_back">Back</string>
+    <string name="workout_legs">Legs</string>
+    <string name="workout_shoulders">Shoulders</string>
+    <string name="workout_abs">Abs</string>
+
+</resources>
