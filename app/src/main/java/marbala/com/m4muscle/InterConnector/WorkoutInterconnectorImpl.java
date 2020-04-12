@@ -7,6 +7,7 @@ import java.util.Arrays;
 import io.reactivex.Observable;
 import marbala.com.m4muscle.BaseClasses.BaseModel;
 import marbala.com.m4muscle.BaseClasses.IBaseInterconnector;
+import marbala.com.m4muscle.Model.WorkoutModel.WorkoutModel;
 import marbala.com.m4muscle.R;
 
 /**
@@ -19,7 +20,14 @@ public class WorkoutInterconnectorImpl implements IBaseInterconnector {
     @Override
     public void LoadDataModel(BaseModel model, LoadingIndicators indicators) {
         indicators.onStartLoading();
-        indicators.onSuccess(Observable.fromArray(Arrays.asList("Chest","Back","Legs","Biceps","Triceps","Shoulders","Abs")));
+        indicators.onSuccess(Observable.fromArray(Arrays.asList(
+                WorkoutModel.builder().icon(R.drawable.ic_workouts).Name("Chest").build(),
+                WorkoutModel.builder().icon(R.drawable.ic_workouts).Name("Back").build(),
+                WorkoutModel.builder().icon(R.drawable.ic_workouts).Name("Legs").build(),
+                WorkoutModel.builder().icon(R.drawable.ic_workouts).Name("Biceps").build(),
+                WorkoutModel.builder().icon(R.drawable.ic_workouts).Name("Triceps").build(),
+                WorkoutModel.builder().icon(R.drawable.ic_workouts).Name("Shoulders").build(),
+                WorkoutModel.builder().icon(R.drawable.ic_workouts).Name("Abs").build())));
     }
 
     @Override
