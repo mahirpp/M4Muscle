@@ -7,11 +7,14 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.ContentLoadingProgressBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.SearchView;
 
@@ -29,12 +32,12 @@ import marbala.com.m4muscle.R;
  */
 public class WorkoutFragment extends Fragment implements IWorkout {
     private static final String TAG = "WorkoutFragment";
-    @BindView(R.id.sav_workout_search)
-    SearchView sav_workout_search;
+    @BindView(R.id.ll_progressLayout)
+    LinearLayout ll_progressLayout;
     @BindView(R.id.rv_workout)
     RecyclerView rv_workout;
-    @BindView(R.id.fl_progressLayout)
-    ProgressBar fl_progressLayout;
+    @BindView(R.id.progressBar)
+    ProgressBar progressBar;
 
     private WorkoutPresenter presenter;
     WorkoutListAdapter adapter;
@@ -45,6 +48,9 @@ public class WorkoutFragment extends Fragment implements IWorkout {
         View view = inflater.inflate(R.layout.fragment_workout, container, false);
         ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Workouts");
         ButterKnife.bind(this, view);
+
+        rv_workout.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+        rv_workout.setHasFixedSize(true);
         presenter = new WorkoutPresenterImpl(this);
 
         return view;
@@ -52,14 +58,14 @@ public class WorkoutFragment extends Fragment implements IWorkout {
 
     @Override
     public void showProgress() {
-        fl_progressLayout.setVisibility(View.VISIBLE);
+        ll_progressLayout.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void hideProgress() {
-            if (fl_progressLayout.isShown()) {
-                fl_progressLayout.setVisibility(View.GONE);
-            }
+        if (ll_progressLayout.isShown()) {
+            ll_progressLayout.setVisibility(View.GONE);
+        }
     }
 
     @Override

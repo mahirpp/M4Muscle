@@ -51,13 +51,11 @@ public class WorkoutPresenterImpl extends WorkoutPresenter implements IBaseInter
 
     @Override
     public void onSuccess(Observable result) {
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                result.subscribe(list -> view.setAdapter((List) list));
-                view.hideProgress();
+        new Handler().postDelayed(() -> {
 
-            }
+            result.subscribe(list -> view.setAdapter((List) list));
+            view.hideProgress();
+
         },5000);
 
     }

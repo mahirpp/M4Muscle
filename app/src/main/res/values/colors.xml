@@ -6,4 +6,5 @@
     <color name="themeColor">#7d1813</color>
     <color name="baseBackground">#898383</color>
     <color name = "titleColor">#FFFFFF</color>
+    <color name="bg_listview">#177D1813</color>
 </resources>

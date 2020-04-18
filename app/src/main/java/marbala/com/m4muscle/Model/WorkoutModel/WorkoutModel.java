@@ -3,6 +3,7 @@ package marbala.com.m4muscle.Model.WorkoutModel;
 import java.util.List;
 import java.util.Map;
 
+import lombok.Builder;
 import lombok.Data;
 
 /**
@@ -10,6 +11,7 @@ import lombok.Data;
  */
 
 @Data
+@Builder
 public class WorkoutModel {
     private int icon;
     private String Name;

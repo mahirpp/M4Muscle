@@ -4,19 +4,22 @@
     android:layout_height="match_parent"
     android:background="#ffffff"
     android:orientation="vertical"
-    android:padding="@dimen/very_small_padding">
+    >
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:padding="@dimen/very_small_padding"
         android:orientation="horizontal">
 
         <LinearLayout
             android:id="@+id/ll_Workouts"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/very_small_padding"
+            android:background="@drawable/bordered_linearlayout"
             android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical">
@@ -34,9 +37,11 @@
         <LinearLayout
             android:id="@+id/ll_GeneralRoutines"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
+            android:layout_margin="@dimen/very_small_padding"
+            android:background="@drawable/bordered_linearlayout"
             android:orientation="vertical">
 
             <ImageView
@@ -52,18 +57,20 @@
 
     </LinearLayout>
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:padding="@dimen/very_small_padding"
         android:orientation="horizontal">
 
         <LinearLayout
             android:id="@+id/ll_MyRoutines"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/very_small_padding"
             android:layout_weight="1"
+            android:background="@drawable/bordered_linearlayout"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -80,8 +87,10 @@
         <LinearLayout
             android:id="@+id/ll_Timer"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_margin="@dimen/very_small_padding"
+            android:background="@drawable/bordered_linearlayout"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -101,14 +110,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:padding="@dimen/very_small_padding"
         android:orientation="horizontal">
 
         <LinearLayout
             android:id="@+id/ll_Nutrition"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
+            android:layout_margin="@dimen/very_small_padding"
+            android:background="@drawable/bordered_linearlayout"
             android:orientation="vertical">
 
             <ImageView
@@ -125,8 +137,10 @@
         <LinearLayout
             android:id="@+id/ll_Help"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_margin="@dimen/very_small_padding"
+            android:background="@drawable/bordered_linearlayout"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -143,12 +157,3 @@
 
 </LinearLayout>
 
-    <!--  <TextView
-                android:id="@+id/TV_Timer"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.7"
-                android:gravity="center"
-                android:text="Gym Timer"
-                android:textColor="@color/abc_input_method_navigation_guard"
-                android:textSize="@dimen/small_text" />-->

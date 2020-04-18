@@ -11,30 +11,40 @@
         android:background="#FFFFFF"
         android:orientation="vertical">
 
-        <SearchView
-            android:id="@+id/sav_workout_search"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableRight="@drawable/ic_menu_camera"
-            android:foregroundTint="@color/themeColor"
-            android:hint="Search a workout" />
-
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv_workout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/small_padding"
-            android:background="#FFFFFF"
-            android:padding="@dimen/very_small_padding" />
+            android:background="@color/bg_listview"
+            android:padding="@dimen/very_small_padding"
+            android:scrollbars="vertical" />
 
 
     </LinearLayout>
 
-    <ProgressBar
-        android:id="@+id/fl_progressLayout"
-        style="?android:attr/progressBarStyle"
+    <LinearLayout
+        android:id="@+id/ll_progressLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#80808080"
-        android:indeterminate="true" />
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/very_small_padding"
+            android:indeterminate="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Loading workout..."
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/small_text" />
+    </LinearLayout>
 </RelativeLayout>
